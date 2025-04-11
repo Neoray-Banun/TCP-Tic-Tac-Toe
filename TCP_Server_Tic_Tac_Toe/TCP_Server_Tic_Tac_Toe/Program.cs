@@ -48,10 +48,10 @@ namespace TCP_Server_Tic_Tac_Toe
 
                     string strPos = Recive(xStream);
                     int pos = int.Parse(strPos);
-                    int posX = (pos / 10) - 1;
-                    int posY = (pos % 10) - 1;
+                    int posY = (pos / 10) - 1;
+                    int posX = (pos % 10) - 1;
 
-                    board[posY, posX] = 'X';
+                    board[posX, posY] = 'X';
                     Win = CheckWin(board, 'X');
 
                     if (Win)
@@ -69,10 +69,10 @@ namespace TCP_Server_Tic_Tac_Toe
 
                     string strPos = Recive(oStream);
                     int pos = int.Parse(strPos);
-                    int posX = (pos / 10) - 1;
-                    int posY = (pos % 10) - 1;
+                    int posY = (pos / 10) - 1;
+                    int posX = (pos % 10) - 1;
 
-                    board[posY, posX] = 'O';
+                    board[posX, posY] = 'O';
                     Win = CheckWin(board, 'O');
 
                     if (Win)
